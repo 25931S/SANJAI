@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="th">
+
+<head>
+    <meta charset="utf-8">
+    <title>Instagram – สานใจ</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <script src="./vendor/react.js"></script>
+    <script src="./vendor/react-dom.js"></script>
+    <script src="./support.js"></script>
+</head>
+
+<body>
+    <x-dc>
+        <helmet>
+            <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&amp;display=swap">
+            <style>
+                body {
+                    margin: 0
+                }
+
+                a {
+                    transition: opacity .2s
+                }
+
+                a:hover {
+                    opacity: .85
+                }
+
+                a,
+                button {
+                    transition: filter .2s ease, transform .2s ease, box-shadow .2s ease, background .2s ease
+                }
+
+                a:hover,
+                button:hover {
+                    filter: brightness(.9)
+                }
+
+                a:active,
+                button:active {
+                    filter: brightness(.8);
+                    transform: scale(.97)
+                }
+
+                a:focus-visible,
+                button:focus-visible {
+                    outline: 3px solid #C08A3E;
+                    outline-offset: 4px
+                }
+
+                @media(prefers-reduced-motion:reduce) {
+
+                    a,
+                    button {
+                        transition: none
+                    }
+                }
+            </style>
+        </helmet>
+        <div style="font-family:'Noto Sans Thai',sans-serif;color:#1F2A33;background:#fff;min-height:100%">
+            <div style="background:#1F2A33;color:#fff;padding:10px 24px;font-size:15px">
+                <div
+                    style="max-width:1280px;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px 20px;justify-content:space-between;align-items:center">
+                    <a href="./Contact.dc.html"
+                        style="color:#fff;font-weight:600;text-decoration:none">← กลับเว็บไซต์สานใจ</a>
+                    <nav style="display:flex;gap:8px;flex-wrap:wrap"><a href="./Social-Line.dc.html"
+                            style="color:#fff;text-decoration:none;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.1)">LINE</a><a
+                            href="./Social-Facebook.dc.html"
+                            style="color:#fff;text-decoration:none;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.1)">Facebook</a><a
+                            href="Social-Instagram.dc.html"
+                            style="color:#fff;text-decoration:none;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.28)">Instagram</a><a
+                            href="./Social-TikTok.dc.html"
+                            style="color:#fff;text-decoration:none;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.1)">TikTok</a>
+                    </nav>
+                </div>
+            </div>
+            <div style="display:flex;min-height:980px;background:#fff">
+                <div
+                    style="width:244px;flex:none;border-right:1px solid #DBDBDB;padding:24px 12px;box-sizing:border-box">
+                    <div style="font-size:24px;font-weight:700;font-style:italic;padding:12px 12px 24px">Instagram</div>
+                    <div
+                        style="display:flex;gap:16px;align-items:center;padding:12px;font-size:16px;border-radius:10px">
+                        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#1F2A33" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M3 11l9-7 9 7v9H3z"></path>
+                        </svg><span>หน้าหลัก</span></div>
+                    <div
+                        style="display:flex;gap:16px;align-items:center;padding:12px;font-size:16px;border-radius:10px">
+                        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#1F2A33" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="11" cy="11" r="7"></circle>
+                            <path d="M16 16l5 5"></path>
+                        </svg><span>ค้นหา</span></div>
+                    <div
+                        style="display:flex;gap:16px;align-items:center;padding:12px;font-size:16px;border-radius:10px">
+                        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#1F2A33" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="9"></circle>
+                            <path d="M15.5 8.5l-2 5-5 2 2-5z"></path>
+                        </svg><span>สำรวจ</span></div>
+                    <div
+                        style="display:flex;gap:16px;align-items:center;padding:12px;font-size:16px;border-radius:10px">
+                        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#1F2A33" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                            <path d="M10 8.5v7l5.5-3.5z"></path>
+                        </svg><span>Reels</span></div>
+                    <div
+                        style="display:flex;gap:16px;align-items:center;padding:12px;font-size:16px;border-radius:10px">
+                        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#1F2A33" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M4 5h16v11H9l-5 4z"></path>
+                        </svg><span>ข้อความ</span></div>
+                    <div
+                        style="display:flex;gap:16px;align-items:center;padding:12px;font-size:16px;border-radius:10px">
+                        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#1F2A33" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path
+                                d="M12 20C4 14 3 8 7 6.5C9.5 5.5 11.5 7 12 8.5C12.5 7 14.5 5.5 17 6.5C21 8 20 14 12 20z">
+                            </path>
+                        </svg><span>การแจ้งเตือน</span></div>
+                    <div
+                        style="display:flex;gap:16px;align-items:center;padding:12px;font-size:16px;border-radius:10px">
+                        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#1F2A33" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                            <path d="M12 8v8M8 12h8"></path>
+                        </svg><span>สร้าง</span></div>
+                    <div style="display:flex;gap:16px;align-items:center;padding:12px;font-size:16px;font-weight:700">
+                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAQDAwQDAwQEBAQFBQQFBwsHBwYGBw4KCggLEA4RERAOEA8SFBoWEhMYEw8QFh8XGBsbHR0dERYgIh8cIhocHRz/2wBDAQUFBQcGBw0HBw0cEhASHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBz/wAARCAFAAUADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD78ooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAorPvdd0vTZBFeajZ20h6JNOiE/gTVu3uYbqJZYJUlibo8bBlP4igCWiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACvnr4/fGS78O3X/CL6BcG31Bow95dp9+FW+6iejEck9gRjk8fQp6V+ePxXu55Pif4tNwT5o1GVeT0UHC/+OgVtRipS1Mq0mo6GU129xK0szmWVjlnkO5j9SeTXW+BviDq/gPU47vTZ2NuWBntGJ8qde4I6A46MORXnqXNWYroAjJ49a7Gk1ZnKm07n6P6HrFt4g0ex1Szbda3kKzRk9drDPPv2rQrgvgtbT2vwt8MJcqVla18wA/3WZmX/AMdIrva85qzaO6LukwooopDCiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooPSgAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK8P8Ait+0Xpfgi6m0fRIY9U1yIlZcviC2b0cjlm/2R07kdKcYuTshOSirs9wPcV8w/tEfA7VNc1VvFnhm1N1NKoF/ZRj94zKMCVB/FwACOvAIzzXj+tfGvx34imd7jxHd28bdIbI+QgHttwfzJrPsfiD4ssmDW/ibWEfrn7ZI36EkV0woyi73MJVYyVrHItYXsMxt3s7lJ1O0xtCwcH0wRmvY/hL8Adb8XahbX+v2c2neHo2DutwpSa6H9xFPIB7sccdM9tzwd+0vr+kzRxeIoI9XsxwZlUR3K+4I+VvoQPrX0/4S8Y6N410tdR0a7W4h4Dr0kib+669VP+RmnVqTirWFThFvc24YY7eJIokVIo1CqqjAUAYAFPorjviDq8thYwWsLFGu2Idgedo7fjkVxTlyxuzqjHmdkbc/ibSbeYwvfReYDghctj6kVo211DeRCWCVJIz/ABKcivEIHwMV1Xgy9kt9XjgUnyrgFWX3AyD+lc0MS5Ss0bSopK6Z6VRRRXWYBRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUE4FAHjH7RfxSl+H/hWOw0yXZrmsbo4XU/NBEB88g9+QB7nPavhuM8kkkknJJOSa9R/aR8Qya78WtXiLkw6WsdlEvYbV3N/485ry23jl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AyTjkZ9xkd813NFO4rHIReELqGfTit7D5NuLXzR5R3OYFIG3nAB3d84xSr4UukkmuUntIrk3UVwkcUJWEbAV5Gc7iGOSPQelddRRcLHHR+D7yGLT4I7+HyoY7VJyYWy/kzGQbfmwN2SDnOOK39Y02TUVs/KlVGt7qO4O4Ehgp5H5GtKikM4Wy+HrWD3zQ6kwNzbzQqTEG8ou3yMATj5Y1VMd8ZqR/AbXEMazXUSAPcStDFF+63SIEGFOeBjd2JJJ4rtqKdxWOXj8M3Ueqx3P2uJrcSrcOrRkyFxbmHrnGOd3TOeKqp4EVLKO0W5WOECzDiOIDeYCSxIPB3ZHUHp3rsqKLhY4WDwdcXNrZyMyQT20JSNJY8mNluBIpGG4GF28c4PbpV3/AIRK5/4lL/aYBc2dxLM0yxsOJJfMZFUkjB6ZPIwCCDXW0UXCxyEnglTDfLHPGst3Dcxu/lfeMsvmKTzyF6fnjFTL4Zu11ea7N1A9s8kswheIkl5IlQgnOCo256ZOa6mii4HFXHgu6ksTHFd20M0huQ6rCfJRZkCkIoORjAPuSematR+DFTVX1A3chkcbNpyVEfkLGQFzgElQ27GeMdK6uii4WOOsvBk40nUrO+uredrq3jt42WAgReXGUVsEn5uc8Yx+tdggwoBOaWikMKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9k="
+                            width="26" height="26" alt="โลโก้สานใจ"
+                            style="display:block;border-radius:50%;object-fit:cover;flex:none"><span>โปรไฟล์</span>
+                    </div>
+                    <div style="display:flex;gap:16px;align-items:center;padding:12px;font-size:16px;margin-top:120px">
+                        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#1F2A33" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg><span>เพิ่มเติม</span></div>
+                </div>
+                <div style="flex:1;padding:36px 24px;box-sizing:border-box">
+                    <div style="width:935px;max-width:100%;margin:0 auto">
+                        <div style="display:flex;gap:70px;align-items:center;flex-wrap:wrap;padding:0 40px">
+                            <div
+                                style="padding:4px;border-radius:50%;background:linear-gradient(45deg,#F9CE34,#EE2A7B,#6228D7)">
+                                <div style="border:4px solid #fff;border-radius:50%"><img
+                                        src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAQDAwQDAwQEBAQFBQQFBwsHBwYGBw4KCggLEA4RERAOEA8SFBoWEhMYEw8QFh8XGBsbHR0dERYgIh8cIhocHRz/2wBDAQUFBQcGBw0HBw0cEhASHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBz/wAARCAFAAUADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD78ooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAorPvdd0vTZBFeajZ20h6JNOiE/gTVu3uYbqJZYJUlibo8bBlP4igCWiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACvnr4/fGS78O3X/CL6BcG31Bow95dp9+FW+6iejEck9gRjk8fQp6V+ePxXu55Pif4tNwT5o1GVeT0UHC/+OgVtRipS1Mq0mo6GU129xK0szmWVjlnkO5j9SeTXW+BviDq/gPU47vTZ2NuWBntGJ8qde4I6A46MORXnqXNWYroAjJ49a7Gk1ZnKm07n6P6HrFt4g0ex1Szbda3kKzRk9drDPPv2rQrgvgtbT2vwt8MJcqVla18wA/3WZmX/AMdIrva85qzaO6LukwooopDCiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooPSgAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK8P8Ait+0Xpfgi6m0fRIY9U1yIlZcviC2b0cjlm/2R07kdKcYuTshOSirs9wPcV8w/tEfA7VNc1VvFnhm1N1NKoF/ZRj94zKMCVB/FwACOvAIzzXj+tfGvx34imd7jxHd28bdIbI+QgHttwfzJrPsfiD4ssmDW/ibWEfrn7ZI36EkV0woyi73MJVYyVrHItYXsMxt3s7lJ1O0xtCwcH0wRmvY/hL8Adb8XahbX+v2c2neHo2DutwpSa6H9xFPIB7sccdM9tzwd+0vr+kzRxeIoI9XsxwZlUR3K+4I+VvoQPrX0/4S8Y6N410tdR0a7W4h4Dr0kib+669VP+RmnVqTirWFThFvc24YY7eJIokVIo1CqqjAUAYAFPorjviDq8thYwWsLFGu2Idgedo7fjkVxTlyxuzqjHmdkbc/ibSbeYwvfReYDghctj6kVo211DeRCWCVJIz/ABKcivEIHwMV1Xgy9kt9XjgUnyrgFWX3AyD+lc0MS5Ss0bSopK6Z6VRRRXWYBRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUE4FAHjH7RfxSl+H/hWOw0yXZrmsbo4XU/NBEB88g9+QB7nPavhuM8kkkknJJOSa9R/aR8Qya78WtXiLkw6WsdlEvYbV3N/485ry23jl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AyTjkZ9xkd813NFO4rHIReELqGfTit7D5NuLXzR5R3OYFIG3nAB3d84xSr4UukkmuUntIrk3UVwkcUJWEbAV5Gc7iGOSPQelddRRcLHHR+D7yGLT4I7+HyoY7VJyYWy/kzGQbfmwN2SDnOOK39Y02TUVs/KlVGt7qO4O4Ehgp5H5GtKikM4Wy+HrWD3zQ6kwNzbzQqTEG8ou3yMATj5Y1VMd8ZqR/AbXEMazXUSAPcStDFF+63SIEGFOeBjd2JJJ4rtqKdxWOXj8M3Ueqx3P2uJrcSrcOrRkyFxbmHrnGOd3TOeKqp4EVLKO0W5WOECzDiOIDeYCSxIPB3ZHUHp3rsqKLhY4WDwdcXNrZyMyQT20JSNJY8mNluBIpGG4GF28c4PbpV3/AIRK5/4lL/aYBc2dxLM0yxsOJJfMZFUkjB6ZPIwCCDXW0UXCxyEnglTDfLHPGst3Dcxu/lfeMsvmKTzyF6fnjFTL4Zu11ea7N1A9s8kswheIkl5IlQgnOCo256ZOa6mii4HFXHgu6ksTHFd20M0huQ6rCfJRZkCkIoORjAPuSematR+DFTVX1A3chkcbNpyVEfkLGQFzgElQ27GeMdK6uii4WOOsvBk40nUrO+uredrq3jt42WAgReXGUVsEn5uc8Yx+tdggwoBOaWikMKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9k="
+                                        width="142" height="142" alt="โลโก้สานใจ"
+                                        style="display:block;border-radius:50%;object-fit:cover;flex:none"></div>
+                            </div>
+                            <div style="flex:1;min-width:280px">
+                                <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span
+                                        style="font-size:20px">sanjai.official</span><span
+                                        style="background:#0095F6;color:#fff;width:16px;height:16px;border-radius:50%;font-size:10px;display:inline-flex;align-items:center;justify-content:center">✓</span><span
+                                        style="background:#0095F6;color:#fff;padding:7px 20px;border-radius:8px;font-weight:600">ติดตาม</span><a
+                                        href="./Social-Line.dc.html"
+                                        style="background:#EFEFEF;color:#1F2A33;padding:7px 20px;border-radius:8px;font-weight:600;text-decoration:none">ส่งข้อความ</a><span
+                                        style="font-size:20px;letter-spacing:2px">···</span></div>
+                                <div style="display:flex;gap:36px;margin:18px 0;font-size:16px"><span><b>86</b>
+                                        โพสต์</span><span><b>5,214</b> ผู้ติดตาม</span><span><b>32</b>
+                                        กำลังติดตาม</span></div><b>สานใจ</b>
+                                <div style="color:#737373;font-size:14px">บริการส่วนตัว</div>
+                                <div style="line-height:1.7;font-size:15px">ดูแลสิ่งที่เหลืออยู่
+                                    ส่งต่อสิ่งที่มีความหมาย<br>จัดการหลังการสูญเสีย · เก็บรักษาความทรงจำ<br><a
+                                        href="./index.html" style="color:#00376B;font-weight:600">สานใจ
+                                        – เว็บไซต์ทางการ</a></div>
+                                <div style="color:#737373;font-size:13px;margin-top:8px">ติดตามโดย nid***, pim*** และอีก
+                                    12 คน</div>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:30px;margin:44px 40px 40px;flex-wrap:wrap">
+                            <div style="text-align:center;font-size:13px;width:90px">
+                                <div
+                                    style="width:84px;height:84px;border-radius:50%;border:2px solid #DBDBDB;padding:3px;box-sizing:border-box;margin-bottom:6px">
+                                    <div style="border-radius:50%;overflow:hidden;width:100%;height:100%">
+                                        <div
+                                            style="position:relative;aspect-ratio:1;background:#E8EDF2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:10px;text-align:center;box-sizing:border-box">
+                                            <svg viewBox="-32 -32 64 64" style="width:62%;max-width:110px;height:auto"
+                                                aria-hidden="true">
+                                                <path d="M-26 -4h20l5 6h27v26h-52z" fill="#C9B48A" stroke="#4A5B78"
+                                                    stroke-width="2.5" stroke-linejoin="round"></path>
+                                                <rect x="-14" y="-26" width="28" height="32" rx="3" fill="#fff"
+                                                    stroke="#4A5B78" stroke-width="2.5"></rect>
+                                                <path d="M-8 -17h16M-8 -10h16M-8 -3h9" stroke="#4A5B78"
+                                                    stroke-width="2.5" stroke-linecap="round"></path>
+                                                <path d="M-26 8h52v18h-52z" fill="#C9B48A"></path>
+                                            </svg></div>
+                                    </div>
+                                </div>บริการ
+                            </div>
+                            <div style="text-align:center;font-size:13px;width:90px">
+                                <div
+                                    style="width:84px;height:84px;border-radius:50%;border:2px solid #DBDBDB;padding:3px;box-sizing:border-box;margin-bottom:6px">
+                                    <div style="border-radius:50%;overflow:hidden;width:100%;height:100%">
+                                        <div
+                                            style="position:relative;aspect-ratio:1;background:#DDE8E8;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:10px;text-align:center;box-sizing:border-box">
+                                            <svg viewBox="-32 -32 64 64" style="width:62%;max-width:110px;height:auto"
+                                                aria-hidden="true">
+                                                <path
+                                                    d="M0 0C-14 -10-12 -26-4 -26C-1 -26 0 -23 0 -22C0 -23 1 -26 4 -26C12 -26 14 -10 0 0Z"
+                                                    fill="#4A5B78"></path>
+                                                <path d="M-30 8C-14 26 10 28 30 4C14 12 8 16 0 16C-8 16 -16 14 -30 8Z"
+                                                    fill="#86A9AE"></path>
+                                            </svg></div>
+                                    </div>
+                                </div>แพ็กเกจ
+                            </div>
+                            <div style="text-align:center;font-size:13px;width:90px">
+                                <div
+                                    style="width:84px;height:84px;border-radius:50%;border:2px solid #DBDBDB;padding:3px;box-sizing:border-box;margin-bottom:6px">
+                                    <div style="border-radius:50%;overflow:hidden;width:100%;height:100%">
+                                        <div
+                                            style="position:relative;aspect-ratio:1;background:#DDE8E8;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:10px;text-align:center;box-sizing:border-box">
+                                            <svg viewBox="-32 -32 64 64" style="width:62%;max-width:110px;height:auto"
+                                                aria-hidden="true">
+                                                <rect x="-25" y="-22" width="50" height="42" rx="5" fill="#fff"
+                                                    stroke="#C9B48A" stroke-width="4"></rect>
+                                                <path
+                                                    d="M0 12C-14 3-13 -9-6 -10C-2 -10.5 0 -7 0 -5C0 -7 2 -10.5 6 -10C13 -9 14 3 0 12Z"
+                                                    fill="#86A9AE" stroke="#4A5B78" stroke-width="2.5"
+                                                    stroke-linejoin="round"></path>
+                                            </svg></div>
+                                    </div>
+                                </div>ความทรงจำ
+                            </div>
+                            <div style="text-align:center;font-size:13px;width:90px">
+                                <div
+                                    style="width:84px;height:84px;border-radius:50%;border:2px solid #DBDBDB;padding:3px;box-sizing:border-box;margin-bottom:6px">
+                                    <div style="border-radius:50%;overflow:hidden;width:100%;height:100%">
+                                        <div
+                                            style="position:relative;aspect-ratio:1;background:#E8EDF2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:10px;text-align:center;box-sizing:border-box">
+                                            <svg viewBox="-32 -32 64 64" style="width:62%;max-width:110px;height:auto"
+                                                aria-hidden="true">
+                                                <rect x="-22" y="-26" width="44" height="52" rx="5" fill="#fff"
+                                                    stroke="#4A5B78" stroke-width="3"></rect>
+                                                <path d="M-13 -12l3 3 6-7M-13 2l3 3 6-7M-13 16l3 3 6-7" stroke="#C9B48A"
+                                                    stroke-width="3" fill="none" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                                <path d="M2 -11h12M2 3h12M2 17h12" stroke="#4A5B78" stroke-width="3"
+                                                    stroke-linecap="round"></path>
+                                            </svg></div>
+                                    </div>
+                                </div>รีวิว
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;justify-content:center;gap:60px;border-top:1px solid #DBDBDB;font-size:13px;letter-spacing:.1em;font-weight:600">
+                            <span
+                                style="border-top:2px solid #1F2A33;margin-top:-1px;padding-top:16px;display:flex;gap:8px;align-items:center"><svg
+                                    viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#1F2A33"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                    aria-hidden="true">
+                                    <rect x="3" y="3" width="18" height="18"></rect>
+                                    <path d="M3 9h18M3 15h18M9 3v18M15 3v18"></path>
+                                </svg>โพสต์</span><span style="color:#8E8E8E;padding-top:16px">REELS</span><span
+                                style="color:#8E8E8E;padding-top:16px">แท็ก</span></div>
+                        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:12px">
+                            <div style="overflow:hidden">
+                                <div
+                                    style="position:relative;aspect-ratio:1;background:#E8EDF2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:10px;text-align:center;box-sizing:border-box">
+                                    <svg viewBox="-32 -32 64 64" style="width:40%;max-width:110px;height:auto"
+                                        aria-hidden="true">
+                                        <path d="M-26 -4h20l5 6h27v26h-52z" fill="#C9B48A" stroke="#4A5B78"
+                                            stroke-width="2.5" stroke-linejoin="round"></path>
+                                        <rect x="-14" y="-26" width="28" height="32" rx="3" fill="#fff" stroke="#4A5B78"
+                                            stroke-width="2.5"></rect>
+                                        <path d="M-8 -17h16M-8 -10h16M-8 -3h9" stroke="#4A5B78" stroke-width="2.5"
+                                            stroke-linecap="round"></path>
+                                        <path d="M-26 8h52v18h-52z" fill="#C9B48A"></path>
+                                    </svg><span
+                                        style="font-weight:700;color:#4A5B78;font-size:14px;line-height:1.4">จัดเอกสาร</span>
+                                </div>
+                            </div>
+                            <div style="overflow:hidden">
+                                <div
+                                    style="position:relative;aspect-ratio:1;background:#DDE8E8;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:10px;text-align:center;box-sizing:border-box">
+                                    <svg viewBox="-32 -32 64 64" style="width:40%;max-width:110px;height:auto"
+                                        aria-hidden="true">
+                                        <rect x="-25" y="-22" width="50" height="42" rx="5" fill="#fff" stroke="#C9B48A"
+                                            stroke-width="4"></rect>
+                                        <path
+                                            d="M0 12C-14 3-13 -9-6 -10C-2 -10.5 0 -7 0 -5C0 -7 2 -10.5 6 -10C13 -9 14 3 0 12Z"
+                                            fill="#86A9AE" stroke="#4A5B78" stroke-width="2.5" stroke-linejoin="round">
+                                        </path>
+                                    </svg><span
+                                        style="font-weight:700;color:#4A5B78;font-size:14px;line-height:1.4">เก็บความทรงจำ</span><span
+                                        style="position:absolute;right:8px;top:8px;display:flex"><svg
+                                            viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff"
+                                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                            aria-hidden="true">
+                                            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                                            <path d="M10 8.5v7l5.5-3.5z"></path>
+                                        </svg></span></div>
+                            </div>
+                            <div style="overflow:hidden">
+                                <div
+                                    style="position:relative;aspect-ratio:1;background:#F1EAD9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:10px;text-align:center;box-sizing:border-box">
+                                    <svg viewBox="-32 -32 64 64" style="width:40%;max-width:110px;height:auto"
+                                        aria-hidden="true">
+                                        <circle cx="0" cy="-12" r="11" fill="#4A5B78"></circle>
+                                        <path d="M-22 26a22 18 0 0 1 44 0z" fill="#4A5B78"></path>
+                                        <circle cx="17" cy="14" r="11" fill="#86A9AE" stroke="#fff" stroke-width="3">
+                                        </circle>
+                                        <path d="M12 14l4 4 7-8" stroke="#fff" stroke-width="3" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg><span
+                                        style="font-weight:700;color:#4A5B78;font-size:14px;line-height:1.4">ประสานผู้เชี่ยวชาญ</span>
+                                </div>
+                            </div>
+                            <div style="overflow:hidden">
+                                <div
+                                    style="position:relative;aspect-ratio:1;background:#F1EAD9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:10px;text-align:center;box-sizing:border-box">
+                                    <svg viewBox="-32 -32 64 64" style="width:40%;max-width:110px;height:auto"
+                                        aria-hidden="true">
+                                        <rect x="-26" y="-18" width="52" height="38" rx="4" fill="#fff" stroke="#4A5B78"
+                                            stroke-width="3"></rect>
+                                        <path d="M-26 -16L0 6L26 -16" fill="none" stroke="#4A5B78" stroke-width="3"
+                                            stroke-linejoin="round"></path>
+                                        <path d="M0 16C-8 10-8 3-4 3C-2 3 0 5 0 6C0 5 2 3 4 3C8 3 8 10 0 16Z"
+                                            fill="#C9B48A"></path>
+                                    </svg><span
+                                        style="font-weight:700;color:#4A5B78;font-size:14px;line-height:1.4">จดหมายเก่า</span><span
+                                        style="position:absolute;right:8px;top:8px;display:flex"><svg
+                                            viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff"
+                                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                            aria-hidden="true">
+                                            <rect x="7" y="3" width="14" height="14" rx="2"></rect>
+                                            <path d="M3 7v12a2 2 0 0 0 2 2h12"></path>
+                                        </svg></span></div>
+                            </div>
+                            <div style="overflow:hidden">
+                                <div
+                                    style="position:relative;aspect-ratio:1;background:#E8EDF2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:10px;text-align:center;box-sizing:border-box">
+                                    <svg viewBox="-32 -32 64 64" style="width:40%;max-width:110px;height:auto"
+                                        aria-hidden="true">
+                                        <path d="M-22 14a12 12 0 0 1 2-23 17 17 0 0 1 33 3 10 10 0 0 1-1 20z"
+                                            fill="#DDE8E8" stroke="#4A5B78" stroke-width="3" stroke-linejoin="round">
+                                        </path>
+                                        <rect x="-9" y="-1" width="18" height="14" rx="3" fill="#C9B48A"></rect>
+                                        <path d="M-5 -1v-5a5 5 0 0 1 10 0v5" fill="none" stroke="#4A5B78"
+                                            stroke-width="3" stroke-linecap="round"></path>
+                                    </svg><span
+                                        style="font-weight:700;color:#4A5B78;font-size:14px;line-height:1.4">ข้อมูลดิจิทัล</span>
+                                </div>
+                            </div>
+                            <div style="overflow:hidden">
+                                <div
+                                    style="position:relative;aspect-ratio:1;background:#DDE8E8;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:10px;text-align:center;box-sizing:border-box">
+                                    <svg viewBox="-32 -32 64 64" style="width:40%;max-width:110px;height:auto"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M0 0C-14 -10-12 -26-4 -26C-1 -26 0 -23 0 -22C0 -23 1 -26 4 -26C12 -26 14 -10 0 0Z"
+                                            fill="#4A5B78"></path>
+                                        <path d="M-30 8C-14 26 10 28 30 4C14 12 8 16 0 16C-8 16 -16 14 -30 8Z"
+                                            fill="#86A9AE"></path>
+                                    </svg><span
+                                        style="font-weight:700;color:#4A5B78;font-size:14px;line-height:1.4">ส่งต่อด้วยใจ</span><span
+                                        style="position:absolute;right:8px;top:8px;display:flex"><svg
+                                            viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff"
+                                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                            aria-hidden="true">
+                                            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                                            <path d="M10 8.5v7l5.5-3.5z"></path>
+                                        </svg></span></div>
+                            </div>
+                            <div style="overflow:hidden">
+                                <div
+                                    style="position:relative;aspect-ratio:1;background:#E8EDF2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:10px;text-align:center;box-sizing:border-box">
+                                    <svg viewBox="-32 -32 64 64" style="width:40%;max-width:110px;height:auto"
+                                        aria-hidden="true">
+                                        <rect x="-22" y="-26" width="44" height="52" rx="5" fill="#fff" stroke="#4A5B78"
+                                            stroke-width="3"></rect>
+                                        <path d="M-13 -12l3 3 6-7M-13 2l3 3 6-7M-13 16l3 3 6-7" stroke="#C9B48A"
+                                            stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        </path>
+                                        <path d="M2 -11h12M2 3h12M2 17h12" stroke="#4A5B78" stroke-width="3"
+                                            stroke-linecap="round"></path>
+                                    </svg><span
+                                        style="font-weight:700;color:#4A5B78;font-size:14px;line-height:1.4">เช็กลิสต์</span><span
+                                        style="position:absolute;right:8px;top:8px;display:flex"><svg
+                                            viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff"
+                                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                            aria-hidden="true">
+                                            <rect x="7" y="3" width="14" height="14" rx="2"></rect>
+                                            <path d="M3 7v12a2 2 0 0 0 2 2h12"></path>
+                                        </svg></span></div>
+                            </div>
+                            <div style="overflow:hidden">
+                                <div
+                                    style="position:relative;aspect-ratio:1;background:#E8EDF2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:10px;text-align:center;box-sizing:border-box">
+                                    <svg viewBox="-32 -32 64 64" style="width:40%;max-width:110px;height:auto"
+                                        aria-hidden="true">
+                                        <path d="M-26 -4h20l5 6h27v26h-52z" fill="#C9B48A" stroke="#4A5B78"
+                                            stroke-width="2.5" stroke-linejoin="round"></path>
+                                        <rect x="-14" y="-26" width="28" height="32" rx="3" fill="#fff" stroke="#4A5B78"
+                                            stroke-width="2.5"></rect>
+                                        <path d="M-8 -17h16M-8 -10h16M-8 -3h9" stroke="#4A5B78" stroke-width="2.5"
+                                            stroke-linecap="round"></path>
+                                        <path d="M-26 8h52v18h-52z" fill="#C9B48A"></path>
+                                    </svg><span style="font-weight:700;color:#4A5B78;font-size:14px;line-height:1.4">3
+                                        ขั้นเริ่มต้น</span></div>
+                            </div>
+                            <div style="overflow:hidden">
+                                <div
+                                    style="position:relative;aspect-ratio:1;background:#DDE8E8;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:10px;text-align:center;box-sizing:border-box">
+                                    <svg viewBox="-32 -32 64 64" style="width:40%;max-width:110px;height:auto"
+                                        aria-hidden="true">
+                                        <rect x="-25" y="-22" width="50" height="42" rx="5" fill="#fff" stroke="#C9B48A"
+                                            stroke-width="4"></rect>
+                                        <path
+                                            d="M0 12C-14 3-13 -9-6 -10C-2 -10.5 0 -7 0 -5C0 -7 2 -10.5 6 -10C13 -9 14 3 0 12Z"
+                                            fill="#86A9AE" stroke="#4A5B78" stroke-width="2.5" stroke-linejoin="round">
+                                        </path>
+                                    </svg><span
+                                        style="font-weight:700;color:#4A5B78;font-size:14px;line-height:1.4">เรื่องเล่า</span><span
+                                        style="position:absolute;right:8px;top:8px;display:flex"><svg
+                                            viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff"
+                                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                            aria-hidden="true">
+                                            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                                            <path d="M10 8.5v7l5.5-3.5z"></path>
+                                        </svg></span></div>
+                            </div>
+                            <div style="overflow:hidden">
+                                <div
+                                    style="position:relative;aspect-ratio:1;background:#F1EAD9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:10px;text-align:center;box-sizing:border-box">
+                                    <svg viewBox="-32 -32 64 64" style="width:40%;max-width:110px;height:auto"
+                                        aria-hidden="true">
+                                        <rect x="-26" y="-18" width="52" height="38" rx="4" fill="#fff" stroke="#4A5B78"
+                                            stroke-width="3"></rect>
+                                        <path d="M-26 -16L0 6L26 -16" fill="none" stroke="#4A5B78" stroke-width="3"
+                                            stroke-linejoin="round"></path>
+                                        <path d="M0 16C-8 10-8 3-4 3C-2 3 0 5 0 6C0 5 2 3 4 3C8 3 8 10 0 16Z"
+                                            fill="#C9B48A"></path>
+                                    </svg><span
+                                        style="font-weight:700;color:#4A5B78;font-size:14px;line-height:1.4">ข้อความถึงคนที่รัก</span>
+                                </div>
+                            </div>
+                            <div style="overflow:hidden">
+                                <div
+                                    style="position:relative;aspect-ratio:1;background:#F1EAD9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:10px;text-align:center;box-sizing:border-box">
+                                    <svg viewBox="-32 -32 64 64" style="width:40%;max-width:110px;height:auto"
+                                        aria-hidden="true">
+                                        <circle cx="0" cy="-12" r="11" fill="#4A5B78"></circle>
+                                        <path d="M-22 26a22 18 0 0 1 44 0z" fill="#4A5B78"></path>
+                                        <circle cx="17" cy="14" r="11" fill="#86A9AE" stroke="#fff" stroke-width="3">
+                                        </circle>
+                                        <path d="M12 14l4 4 7-8" stroke="#fff" stroke-width="3" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg><span
+                                        style="font-weight:700;color:#4A5B78;font-size:14px;line-height:1.4">ถามตอบ</span><span
+                                        style="position:absolute;right:8px;top:8px;display:flex"><svg
+                                            viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff"
+                                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                            aria-hidden="true">
+                                            <rect x="7" y="3" width="14" height="14" rx="2"></rect>
+                                            <path d="M3 7v12a2 2 0 0 0 2 2h12"></path>
+                                        </svg></span></div>
+                            </div>
+                            <div style="overflow:hidden">
+                                <div
+                                    style="position:relative;aspect-ratio:1;background:#DDE8E8;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:10px;text-align:center;box-sizing:border-box">
+                                    <svg viewBox="-32 -32 64 64" style="width:40%;max-width:110px;height:auto"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M0 0C-14 -10-12 -26-4 -26C-1 -26 0 -23 0 -22C0 -23 1 -26 4 -26C12 -26 14 -10 0 0Z"
+                                            fill="#4A5B78"></path>
+                                        <path d="M-30 8C-14 26 10 28 30 4C14 12 8 16 0 16C-8 16 -16 14 -30 8Z"
+                                            fill="#86A9AE"></path>
+                                    </svg><span
+                                        style="font-weight:700;color:#4A5B78;font-size:14px;line-height:1.4">ขอบคุณ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            style="display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:center;color:#737373;font-size:12px;margin:56px 0 12px">
+                            <span>Meta</span><span>เกี่ยวกับ</span><span>บล็อก</span><span>งาน</span><span>ความช่วยเหลือ</span><span>API</span><span>ความเป็นส่วนตัว</span><span>ข้อกำหนด</span><span>สถานที่</span><span>ภาษา</span>
+                        </div>
+                        <div style="text-align:center;color:#737373;font-size:12px">© 2026 Instagram from Meta</div>
+                    </div>
+                </div>
+            </div>
+            <section aria-label="เรื่องราวและบริการจากสานใจ" style="max-width:1040px;margin:24px auto;padding:20px;background:#fff;border-radius:16px;box-shadow:0 2px 12px rgba(23,65,74,.08)"><h2 style="margin:0 0 6px;color:#17414A;font-size:22px">เรื่องราวและบริการจากสานใจ</h2><p style="margin:0 0 16px;color:#5F6B73;font-size:14px;line-height:1.7">ภาพการดูแลครอบครัว การจัดการเอกสาร และการเก็บรักษาความทรงจำ</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px"><figure style="margin:0;background:#F8FAF8;border:1px solid #E1E8E5;border-radius:12px;overflow:hidden"><img src="./photo/11.jpg" alt="เริ่มต้นพูดคุยด้วยความเข้าใจ" loading="lazy" style="display:block;width:100%;height:190px;object-fit:cover"><figcaption style="padding:12px 14px;color:#33434A;font-size:14px;font-weight:600;line-height:1.6">เริ่มต้นพูดคุยด้วยความเข้าใจ</figcaption></figure><figure style="margin:0;background:#F8FAF8;border:1px solid #E1E8E5;border-radius:12px;overflow:hidden"><img src="./photo/remaber.jpg" alt="ดูแลภาพถ่ายและเรื่องราวของครอบครัว" loading="lazy" style="display:block;width:100%;height:190px;object-fit:cover"><figcaption style="padding:12px 14px;color:#33434A;font-size:14px;font-weight:600;line-height:1.6">ดูแลภาพถ่ายและเรื่องราวของครอบครัว</figcaption></figure><figure style="margin:0;background:#F8FAF8;border:1px solid #E1E8E5;border-radius:12px;overflow:hidden"><img src="./photo/24.jpg" alt="อยู่เคียงข้างกันในวันที่ยากลำบาก" loading="lazy" style="display:block;width:100%;height:190px;object-fit:cover"><figcaption style="padding:12px 14px;color:#33434A;font-size:14px;font-weight:600;line-height:1.6">อยู่เคียงข้างกันในวันที่ยากลำบาก</figcaption></figure></div></section><div style="text-align:center;color:#5F6B73;font-size:13px;padding:20px">
+                ตัวเลขและเนื้อหาในหน้านี้เป็นข้อมูลตัวอย่าง</div>
+        </div>
+    </x-dc>
+    <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1360,"height":1700}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+
+</html>
